@@ -1,0 +1,13 @@
+1from typing import List
+2
+3class Solution:
+4    def twoSum(self, nums: List[int], target: int) -> List[int]:
+5        num_map = {} 
+6        for i, num in enumerate(nums):
+7            complement = target - num
+8            if complement in num_map:
+9                return [num_map[complement], i]
+10            num_map[num] = i
+11
+12
+13        
